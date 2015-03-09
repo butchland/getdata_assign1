@@ -12,7 +12,7 @@ The first two columns are:
 
 * __activity__ - type of activity (based on the activity\_labels.txt from the UCI HAR data set). The data for this column comes from the y\_train.txt and y_test.txt files of the train and test folders of the UCI HAR data set respectively.
 
-* The next columns contain the acceleration and gyroscopic measurements from the study and are named based on the features.txt file of the UCI HAR Data set except their names have been renamed: whenever the UCI HAR data set column name has a "()-" in the original column have been replaced by  "\_"(underscore) and all other "-" (dashes) have also been replaced by "\_"(underscore). For further information about the column names, please refer to features_info.txt file in the UCI HAR data set.
+* The next columns contain the acceleration and gyroscopic measurements from the study and are named based on the features.txt file of the UCI HAR Data set except their column names have been renamed: whenever the UCI HAR data set column name has a "()-" in the original column have been replaced by  "\_"(underscore) and all other "-" (dashes) have also been replaced by "\_"(underscore). Other transformations are replacing "," with "\_","()" with "\_" except when its the last part of the column name, "(" and ")" are also replaced by "\_" except when the parenthesis is the last part of the column name. For further information about the column names, please refer to features_info.txt file in the UCI HAR data set.
 
   For example, the original column name "__tBodyAcc-mean()-X__" has been replaced in the runAnalysis.txt and allData.txt datasets by the column name "**tBodyAcc\_mean\_X**". This was done primarily because R does not seem to accept "()" and "-" as valid parts of column names(and replaces them with "."(periods)).
   
@@ -27,7 +27,7 @@ The first two columns are:
      These inertial measurements constitute the next 1152 columns of the allData.txt data set.
  
 
-All in all, there are 1715 columns (2 + 561 + 1152) in the allData.txt data set
+All in all, there are 1715 columns (2 + 561 + 1152) in the allData.txt data set. As mentioned in the source, all measurements have been normalized and bounded within [-1,1].
 
 #### runAnalysis.txt
 
